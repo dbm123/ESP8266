@@ -1,4 +1,6 @@
 /*
+ This works with fat ESP8266 (blue download LED) Dec 10 2017 DBM
+ 
  ESP8266 Blink by Simon Peter
  Blink the blue LED on the ESP-01 module
  This example code is in the public domain
