@@ -26,9 +26,10 @@ void setup()
   Heltec.begin(true /*DisplayEnable Enable*/, true /*Serial Enable*/);
   Heltec.display->init();
   Heltec.display->flipScreenVertically();
-  Heltec.display->setFont(ArialMT_Plain_24);
+  Heltec.display->setFont(ArialMT_Plain_16);
 
-  Heltec.display->drawString(0,0,"Temp/Humidity");
+  Heltec.display->drawString(0,0,"DHT22 on pin 14");
+  Heltec.display->setFont(ArialMT_Plain_24);
   Heltec.display->display();
 }
 
@@ -63,7 +64,7 @@ void loop()
   Serial.println(dht.computeHeatIndex(dht.toFahrenheit(temperature), humidity, true), 1);
 
   Heltec.display->clear();
-  Heltec.display->drawString(0,0,"Temp=" + String(temperature, 1));
+  Heltec.display->drawString(0,6,String(temperature, 1)+"C  " + String(temperature, 0) + "%");
   Heltec.display->display();
   
   //delay(2000);
