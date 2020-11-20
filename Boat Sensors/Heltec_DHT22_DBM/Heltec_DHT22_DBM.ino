@@ -1,6 +1,10 @@
+#include <splash.h>
+
 #include "DHTesp.h"
 #include <Wire.h>  // Only needed for Arduino 1.6.5 and earlier
 #include "heltec.h" // alias for `#include "SSD1306Wire.h"`
+
+// Requires the Heltec Wifi 8 board package and the Heltec library
 
 #ifdef ESP32
 #pragma message(THIS EXAMPLE IS FOR ESP8266 ONLY!) // Heltec wifi 8 15 NOV 2020
@@ -25,7 +29,7 @@ void setup()
 
   Heltec.begin(true /*DisplayEnable Enable*/, true /*Serial Enable*/);
   Heltec.display->init();
-  Heltec.display->flipScreenVertically();
+  //Heltec.display->flipScreenVertically();
   Heltec.display->setFont(ArialMT_Plain_16);
 
   Heltec.display->drawString(0,0,"DHT22 on pin 14");
