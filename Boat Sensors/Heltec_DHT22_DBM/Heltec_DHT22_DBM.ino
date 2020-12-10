@@ -1,3 +1,7 @@
+//
+// board package Heltec wifi 8 
+// works
+//
 #include <splash.h>
 
 #include "DHTesp.h"
